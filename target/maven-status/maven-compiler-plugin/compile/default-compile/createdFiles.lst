@@ -1,0 +1,11 @@
+com\revature\beans\Movie.class
+com\revature\controllers\StaticController.class
+com\revature\controllers\ErrorController.class
+com\revature\controllers\RatingController.class
+com\revature\dao\RatingDao.class
+com\revature\services\RatingService.class
+com\revature\services\MovieService.class
+com\revature\util\ConnectionUtil.class
+com\revature\beans\Rating.class
+com\revature\controllers\MovieController.class
+com\revature\dao\MovieDao.class

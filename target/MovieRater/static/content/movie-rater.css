@@ -1,0 +1,53 @@
+container {
+    text-align: center;
+}
+
+#movie-list {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.movie-card {
+    text-align: center;
+    width: 20%;
+    margin: 20px;
+    border: 1px solid #eee;
+}
+
+.movie-card > p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    min-height: 25px;
+}
+
+.movie-card > img {
+    box-sizing: border-box;
+    overflow: none;
+    margin: 10px;
+    max-width: 90%;
+    max-height: 300px;
+    
+}
+
+#movie-rater {
+    display: flex;
+    justify-content: space-around;
+    margin: 10%;
+    border: 1px solid #eee;
+    padding: 5% 0;
+    box-sizing: border-box;
+}
+
+#movie-rater > img {
+    max-height: 300px;
+}
+#details {
+    max-width: 35%;
+    font-size: 300%;
+}
+#details > h3 {
+    font-size: 200%;
+}

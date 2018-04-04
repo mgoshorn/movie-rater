@@ -2,6 +2,7 @@ package com.revature.controllers;
 
 import java.io.IOException;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,6 +22,27 @@ public class RatingController extends DefaultServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 		log.trace(request.getRequestURI());
 		
+		
+		// Forward
+//		try {
+//			request.getRequestDispatcher("/Movie/3").forward(request, response);
+//		} catch (ServletException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		} catch (IOException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		};
+		
+		
+		//Redirect to Google
+		try {
+			response.sendRedirect("http://localhost:8080/MovieRater/Movie/3");
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+//		
 		String context = request.getRequestURI().substring("/MovieRater/Rating".length());
 		
 		if(context.length() <= 1) {

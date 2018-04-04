@@ -32,7 +32,7 @@ public class MovieController extends DefaultServlet {
 	}
 	
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		log.trace(request.getRequestURI());
 		String context = request.getRequestURI().substring(request.getContextPath().length() + "Movie/".length());
 		
@@ -46,10 +46,10 @@ public class MovieController extends DefaultServlet {
 			handleGetMovie(id, response);
 			return;
 		} catch(NumberFormatException e) {
-			e.printStackTrace();
+			//Note: response.setStatus(404) will not work!
+			response.sendError(404);
 		}
 		
-		response.setStatus(404);
 	}
 	
 	@Override
